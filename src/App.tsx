@@ -13,7 +13,9 @@ import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
 import { AuthProvider } from "./hooks/useAuth";
 import AllItems from "./pages/AllItem";
-import DashboardAdmin from "./pages/DashboardAdmin";
+import UsersTable from "./pages/UsersTable";
+import ItemsTable from "./pages/ItemsTable";
+import ReportsTable from "./pages/ReportsTable";
 
 const queryClient = new QueryClient();
 
@@ -34,7 +36,9 @@ const App = () => (
             <Route path="/profile" element={<Profile />} />
             <Route path="/item/:id" element={<ItemDetails />} />
             <Route path="/AllItem" element={<AllItems />} />
-            <Route path="/DashboardAdmin" element={<DashboardAdmin />} />
+            <Route path="/UsersTable" element={<UsersTable />} />
+            <Route path="/ItemsTable" element={<ItemsTable />} />
+            <Route path="/ReportsTable" element={<ReportsTable />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
